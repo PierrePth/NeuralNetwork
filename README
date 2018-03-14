@@ -1,1 +1,81 @@
+################################## README #####################################
 
+This project was done during my 3rd year on an engineering school. This is a
+personnal project I wanted to do in order to understand the very basics of
+machine learning technics. That is why the NN implemented are not CNN / RNN but
+just NN that uses SGD and sigmoid activation function for the time being.
+However, other techniques will certainly be used (softmax, tanh, ReLU, ...).
+
+  >>> Compilation
+
+In order to compile, you must use cmake. You can proceed as follow (from the
+root directory):
+
+  $ mkdir build
+  $ cd build
+  $ cmake ..
+  $ make
+
+  >>> Runing the executable
+
+The executable needs a few parameter to run, in the right order :
+  . The location of the directory containing the training examples
+  . The number of input neurons (same number as in the file)
+  . The number of hidden neurons (same number as in the file)
+  . The number of output neurons (same number as in the file)
+  . The learning rate of the network
+  . The number of epochs
+
+Using the same example as before, you could run the network this way :
+  . ./nn ../data_set/ 1 3 1 0.5 8000
+
+  >>> Input files
+
+I did not spend time on parsing the input, the parser in very simple and C
+style, here is how an input file looks like :
+
+<input values (one per line)>
+-
+<output values (one per line)>
+
+Here is an example for a simple NOT gate :
+
+  > file true.txt :
+
+0
+-
+1
+
+  > file false.txt
+
+1
+-
+0
+
+  >>> Explanation of the algorithms
+
+  >>> Features to implement in the future
+
+In order to understand better the problematics and the possible optimizations
+that we can encounter while playing with NNs, I would like to implement :
+
+  . Different activation functions
+  . Batch / Mini-Batch GD
+  . Regression
+  . Techniques to prevent overfitting
+
+Some other techniques could be implemented, but I will do that on an other
+project, using the TensorFlow software library.
+
+  >>> Ressources
+
+Books:
+  Fundamentals of Deep Learning, Nikhil Buduma and Nicholas Locascio, O'REILLY
+
+Websites:
+  https://stackoverflow.com
+  https://tensorflow.org
+
+--
+Pierre-Adrien 'ponthi_p' Ponthieu.
+##############################################################################
